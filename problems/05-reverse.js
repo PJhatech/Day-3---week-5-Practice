@@ -11,11 +11,33 @@ reverse("q"); // "q"
 reverse("id"); // "di"
 reverse(""); // ""
 ***********************************************************************/
+// function descendNum(StartNum) {
+//   console.log(StartNum);
+ 
+//   let NextNum = StartNum - 1;
+ 
+//   if (NextNum > 0) {
+     
+//       descendNum(NextNum);
+//   }
+ 
+// }
+
+// descendNum(10);
 
 
-function reverse(str) {
-  // Your code here
+let reverse = function(str) {
+   if (str.length === 0) {
+        return str;
+   } else {
+      return reverse(str.substr(1)) + str.charAt(0);
+   }
 }
+
+  
+  
+// }
+console.log(reverse("house")); // "esuoh"
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
